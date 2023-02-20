@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:signinpageui/fasebookTwitter.dart';
-import 'package:signinpageui/logo_container.dart';
-import 'package:signinpageui/orDivider.dart';
+import 'package:signinpageui/Icon_container.dart';
+import 'package:signinpageui/signin_page/fasebookTwitter.dart';
+import 'package:signinpageui/signin_page/logo_container.dart';
+import 'package:signinpageui/signin_page/orDivider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -68,26 +69,7 @@ class _HomePageState extends State<HomePage> {
                             prefixIcon: Padding(
                               padding:
                                   const EdgeInsets.only(left: 10, right: 10),
-                              child: Container(
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  gradient: LinearGradient(colors: [
-                                    Color(0xffC33764),
-                                    Color(0xff1D2671)
-                                  ]),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SvgPicture.asset(
-                                    'assets/users.svg',
-                                    width: 10,
-                                    height: 20,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
+                              child: IconContainer(icon:'assets/users.svg'),
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30)),
@@ -112,26 +94,9 @@ class _HomePageState extends State<HomePage> {
                             prefixIcon: Padding(
                               padding:
                                   const EdgeInsets.only(left: 10, right: 10),
-                              child: Container(
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  gradient: LinearGradient(colors: [
-                                    Color(0xffC33764),
-                                    Color(0xff1D2671)
-                                  ]),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SvgPicture.asset(
-                                    'assets/password.svg',
-                                    width: 10,
-                                    height: 20,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
+                              child:  IconContainer(icon:'assets/password.svg'),
+
+
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30)),
@@ -244,3 +209,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
