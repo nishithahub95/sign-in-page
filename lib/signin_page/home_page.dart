@@ -4,6 +4,7 @@ import 'package:signinpageui/Icon_container.dart';
 import 'package:signinpageui/signin_page/fasebookTwitter.dart';
 import 'package:signinpageui/signin_page/logo_container.dart';
 import 'package:signinpageui/signin_page/orDivider.dart';
+import 'package:signinpageui/signup_page/sign_up.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -185,12 +186,17 @@ class _HomePageState extends State<HomePage> {
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 18),
                             ),
-                            Text(
-                              'Sign Up',
-                              style: TextStyle(
-                                  color: Color(0xff1D2671),
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context,MaterialPageRoute(builder:(context)=> SignUp()));
+                              },
+                              child: Text(
+                                'Sign Up',
+                                style: TextStyle(
+                                    color: Color(0xff1D2671),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             )
                           ],
                         ),
